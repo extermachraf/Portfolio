@@ -1,5 +1,14 @@
-import Image from "next/image";
+import React from "react";
+import About from "@/components/About";
 
-export default function Home() {
-  return <main className="text-black dark:text-white"></main>;
-}
+const page = () => {
+  return (
+    <div className="w-full flex justify-center">
+      <div className="w-[400px]">
+        <About />
+      </div>
+    </div>
+  );
+};
+
+export default page;

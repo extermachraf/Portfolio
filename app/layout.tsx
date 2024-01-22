@@ -21,10 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-slate-50 dark:bg-[#0d1117] transition-margin duration-200 ease-in-out`}
+        className={`${inter.className} bg-[#FFF] dark:bg-[#0d1117] transition-margin duration-200 ease-in-out`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="w-full h-[40px]  flex items-center justify-end">
+          <div
+            className="w-full h-[40px]  flex items-center justify-end
+            sm:h-[60px]"
+          >
             <NavBar />
             <ThemeSwitcher />
           </div>
