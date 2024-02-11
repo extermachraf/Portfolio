@@ -18,6 +18,8 @@ const config: Config = {
     fontFamily: {
       // Alfa+Slab+One: ["Alfa+Slab+One", "sans-serif"],
       hi: ["Lalezar", "sans-serif"],
+      lexend : ["Lexend", "sans-serif"],
+      kanit : ["Kanit", "sans-serif"],
     }
   },
   plugins: [],

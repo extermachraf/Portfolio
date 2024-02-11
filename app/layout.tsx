@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-[#FFF] dark:bg-[#0d1117] transition-margin duration-200 ease-in-out`}
+        className={`${inter.className} bg-[#FFF] dark:bg-[#0d1117] transition-margin duration-200 ease-in-out h-[3000px]`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div
