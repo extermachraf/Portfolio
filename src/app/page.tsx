@@ -17,34 +17,17 @@ import { useScroll } from "framer-motion";
 import { useRef } from "react";
 import { useEffect } from "react";
 export default function Home() {
-  useEffect(() => {
-    Events.scrollEvent.register("begin", function (to, element) {
-      console.log("begin", arguments);
-    });
-
-    Events.scrollEvent.register("end", function (to, element) {
-      console.log("end", arguments);
-    });
-
-    scrollSpy.update();
-
-    return () => {
-      Events.scrollEvent.remove("begin");
-      Events.scrollEvent.remove("end");
-    };
-  }, []);
-
   return (
-    <main className="snap-y snap-mandatory flex flex-col items-center justify-between">
-      <Element name="aboutSection">
+    <main className=" flex flex-col items-center justify-between">
+      <section>
         <About />
-      </Element>
-      <Element name="projectsSection" className="w-full h-full">
+      </section>
+      <section>
         <Projects />
-      </Element>
-      <Element name="contactSection">
+      </section>
+      <section>
         <Contact />
-      </Element>
+      </section>
     </main>
   );
 }

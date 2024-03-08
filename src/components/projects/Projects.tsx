@@ -1,5 +1,6 @@
 import React from "react";
 import { StickyScrollRevealDemo } from "../StickyScrollRevealDemo/StickyScrollRevealDemo";
+
 const Projects = () => {
   return (
     <div

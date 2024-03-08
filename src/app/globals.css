@@ -24,13 +24,12 @@
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 } */
-/* html{
+html{
   scroll-snap-type: y mandatory;
-} */
-/* section{
+}
+section{
   scroll-snap-align: start;
-} */
-
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;

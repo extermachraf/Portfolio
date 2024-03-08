@@ -1,11 +1,23 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ThemeSwitcher } from "@/components/toggle/ThemeSwitcher";
 import Image from "next/image";
 import Link from "next/link";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
+import Loading from "../Loading/Loading";
+
 export function NavBar() {
+  const [loading, setLoading] = useState(false);
+  const loadingAnimation = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  };
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <div className="fixed w-full top-3 h-[60px] bg-[#27C7D4] dark:bg-[#EA5863] z-50">
       <div className="h-full w-fit absolute ml-[10px]">
@@ -19,13 +31,13 @@ export function NavBar() {
       </div>
       <ThemeSwitcher />
       <div className="h-full flex items-center justify-center text-[30px] space-x-5 md:space-x-44">
-        <button onClick={() => scroll.scrollToTop()} className="">
-          About
-        </button>
-        <ScrollLink to="projecttSection" smooth={true} duration={500}>
+        <ScrollLink to="AboutSection">
+          <button onClick={loadingAnimation}>About</button>
+        </ScrollLink>
+        <ScrollLink onClick={loadingAnimation} to="projecttSection">
           <button>Projects</button>
         </ScrollLink>
-        <ScrollLink to="contactSection" smooth={true} duration={500}>
+        <ScrollLink onClick={loadingAnimation} to="contactSection">
           <button>Contact</button>
         </ScrollLink>
       </div>

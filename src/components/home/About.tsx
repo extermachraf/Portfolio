@@ -7,7 +7,6 @@ import Link from "next/link";
 import git from "@/../public/github.svg";
 import Image from "next/image";
 import { motion } from "framer-motion";
-
 function FindMeOn() {
   return (
     <div className="flex items-center justify-end">
@@ -53,7 +52,7 @@ function FindMeOn() {
 const About = () => {
   return (
     <motion.div
-      id="Home"
+      id="AboutSection"
       className=" w-full h-screen flex items-center justify-center pt-11"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
