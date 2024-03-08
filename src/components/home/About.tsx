@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import LeftSide from "./leftside/LeftSide";
 import { SVGMaskEffectDemo } from "../SVGMaskEffectDemo/SVGMaskEffectDemo";
@@ -5,6 +6,7 @@ import Linkdeen from "@/../public/linkdeen.svg";
 import Link from "next/link";
 import git from "@/../public/github.svg";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function FindMeOn() {
   return (
@@ -50,11 +52,16 @@ function FindMeOn() {
 
 const About = () => {
   return (
-    <div
+    <motion.div
       id="Home"
-      className="w-full h-screen flex items-center justify-center pt-11"
+      className=" w-full h-screen flex items-center justify-center pt-11"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: 1,
+      }}
     >
-      <div className="w-full h-full flex items-center space-x-4 justify-around">
+      <div className=" w-full h-full flex items-center space-x-4 justify-around">
         <div className="sm:hidden md:block md:w-[500px] lg:w-[800px] h-full">
           <LeftSide />
         </div>
@@ -74,7 +81,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
