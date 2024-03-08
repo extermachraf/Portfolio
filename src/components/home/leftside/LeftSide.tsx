@@ -39,8 +39,6 @@ const LeftSide = () => {
           <ScrollLink
             className="text-[40px] absolute mr-[80px]"
             to="contactSection"
-            smooth={true}
-            duration={500}
           >
             <motion.div animate={textAnimation} initial={{ opacity: 0 }}>
               Contact me
@@ -51,7 +49,7 @@ const LeftSide = () => {
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 1.1 }}
           >
-            <ScrollLink to="contactSection" smooth={true} duration={500}>
+            <ScrollLink to="contactSection">
               <Image
                 src="/contact.svg"
                 height="24"

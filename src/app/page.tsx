@@ -22,7 +22,7 @@ export default function Home() {
       <section>
         <About />
       </section>
-      <section>
+      <section className="w-full h-full">
         <Projects />
       </section>
       <section>

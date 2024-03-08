@@ -1,18 +1,28 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 const Loading = () => {
   const [countFromZeroToHundred, setCountFromZeroToHundred] = useState(0);
+  const controls = useAnimation();
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCountFromZeroToHundred((prev) => prev + 1);
     }, 10);
+    controls.start({ y: 0 });
+
     return () => clearInterval(interval);
-  }, []);
+  }, [controls]);
+
   return (
-    <div className="fixed h-screen w-screen bg-[#FE9063] grid grid-rows-7 z-50">
+    <motion.div
+      initial={{ y: -500 }}
+      animate={controls}
+      transition={{ duration: 0.5 }}
+      className="fixed h-screen w-screen bg-[#FE9063] grid grid-rows-7 z-50"
+    >
       <div className="row-start-1 row-span-1 w-full h-full flex items-center justify-start p-7">
         <div>
           <Image
@@ -39,7 +49,7 @@ const Loading = () => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
