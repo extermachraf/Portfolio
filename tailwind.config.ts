@@ -19,12 +19,19 @@ const config: Config = {
       fontFamily: {
         // add the css variable and include fallback fonts from tailwind default theme
         sans: ['var(--font-italianno)', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'sans-serif'],
-        romanesco: ['Romanesco', 'cursive']
+        romanesco: ['Romanesco', 'monospace']
       },
       animation: {
         shimmer: "shimmer 2s linear infinite",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
       keyframes: {
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
         shimmer: {
           from: {
             backgroundPosition: "0 0",

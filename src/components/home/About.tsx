@@ -10,16 +10,16 @@ import { motion } from "framer-motion";
 function FindMeOn() {
   return (
     <div className="flex items-center justify-end">
-      <div className="mr-[10px] w-[300px] text-[40px]  col-start-2 ">
+      <div className="mr-[10px] w-[300px] text-[30px]  col-start-2 ">
         <div className="flex space-x-7 items-center">
-          <div className="text-[#FE9063]">find me on</div>
+          <div className="text-[#252930] dark:text-white">find me on</div>
           <div className="flex space-x-3">
             <Link href="https://www.linkedin.com/in/achraf-el-kouch-a43256258/">
               <Image
                 src="/linkdeen.svg"
                 width="24"
                 height="24"
-                className="h-[40px] w-[40px] object-cover group-hover/card:shadow-xl"
+                className="h-[30px] w-[30px] object-cover group-hover/card:shadow-xl"
                 alt=""
               />
             </Link>
@@ -28,7 +28,7 @@ function FindMeOn() {
                 src="/github.svg"
                 width="24"
                 height="24"
-                className="h-[40px] w-[40px] object-cover group-hover/card:shadow-xl"
+                className="h-[30px] w-[30px] object-cover group-hover/card:shadow-xl"
                 alt=""
               />
             </Link>
@@ -37,13 +37,13 @@ function FindMeOn() {
                 src="/mail.svg"
                 width="24"
                 height="24"
-                className="h-[40px] w-[40px] object-cover group-hover/card:shadow-xl"
+                className="h-[30px] w-[30px] object-cover group-hover/card:shadow-xl"
                 alt=""
               />
             </Link>
           </div>
         </div>
-        <div className="rounded-lg lg:w-[300px] h-[10px] bg-[#EA5863]"></div>
+        <div className="rounded-lg lg:w-[300px] h-[10px] bg-[#4F46E5] dark:bg-[#27C7D4]"></div>
       </div>
     </div>
   );
@@ -65,9 +65,11 @@ const About = () => {
           <LeftSide />
         </div>
         <div className=" w-full  h-full grid grid-rows-4 place-items-center ">
-          <div className="row-start-1  w-full h-full flex flex-col items-start justify-end space-y-[-40px]">
-            <div className="text-[50px] text-[#FE9063]">El Kouch Achraf</div>
-            <div className="text-[40px] font-medium dark:text-[#27C7D4] text-[#EA5863] ml-[40px]">
+          <div className="row-start-1  w-full h-full flex flex-col items-start justify-end space-y-[-20px]">
+            <div className="text-[50px] text-[#252930] dark:text-white">
+              El Kouch Achraf
+            </div>
+            <div className="text-[40px] font-medium dark:text-[#27C7D4] text-[#4F46E5] ml-[40px]">
               {" "}
               software engineering student
             </div>

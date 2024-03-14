@@ -10,16 +10,16 @@ import Loading from "../Loading/Loading";
 export function NavBar() {
   const [loading, setLoading] = useState(false);
   const loadingAnimation = () => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
+    // setLoading(true);
+    // setTimeout(() => {
+    //   setLoading(false);
+    // }, 1000);
   };
   if (loading) {
     return <Loading />;
   }
   return (
-    <div className="fixed w-full top-3 h-[60px] bg-[#27C7D4] dark:bg-[#EA5863] z-50">
+    <div className="fixed w-full top-3 h-[60px] bg-[#4F46E5] dark:bg-[#ffffff] z-50">
       <div className="h-full w-fit absolute ml-[10px]">
         <Image
           src="/logo.svg"
@@ -30,7 +30,7 @@ export function NavBar() {
         />
       </div>
       <ThemeSwitcher />
-      <div className="h-full flex items-center justify-center text-[30px] space-x-5 md:space-x-44">
+      <div className="h-full flex items-center dark:text-[#222831] text-white justify-center text-[25px] space-x-5 md:space-x-44">
         <ScrollLink to="AboutSection">
           <button onClick={loadingAnimation}>About</button>
         </ScrollLink>

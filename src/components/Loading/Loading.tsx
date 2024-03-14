@@ -11,14 +11,14 @@ const Loading = () => {
     const interval = setInterval(() => {
       setCountFromZeroToHundred((prev) => prev + 1);
     }, 10);
-    controls.start({ y: 0 });
+    controls.start({ x: 0 });
 
     return () => clearInterval(interval);
   }, [controls]);
 
   return (
     <motion.div
-      initial={{ y: -500 }}
+      initial={{ x: 800 }}
       animate={controls}
       transition={{ duration: 0.5 }}
       className="fixed h-screen w-screen bg-[#FE9063] grid grid-rows-7 z-50"

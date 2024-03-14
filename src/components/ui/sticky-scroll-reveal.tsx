@@ -72,7 +72,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="lg:text-[80px] text-[50px]  text-[#FE9063] dark:text-[#EA5863]"
+                className="lg:text-[80px] text-[50px]  dark:text-[#27C7D4]"
               >
                 {item.title}
               </motion.h2>
@@ -83,7 +83,7 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg font-romanesco text-black dark:text-slate-300 max-w-sm mt-10"
+                className="text-kg  text-black dark:text-slate-300 max-w-sm mt-10"
               >
                 {item.description}
               </motion.p>
@@ -94,15 +94,15 @@ export const StickyScroll = ({
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg font-romanesco text-black dark:text-slate-300 max-w-sm mt-10"
+                className="text-kg  text-black dark:text-slate-300 max-w-sm mt-10"
               >
                 <motion.div
-                  className="w-[300px] h-[40px] bg-[#EA5863] text-white flex items-center justify-center
+                  className="w-[300px] h-[40px] bg-[#252930] text-white flex items-center justify-center
                   shadow-md shadow-black dark:shadow-white border-2 border-solid border-gray-300"
                   whileHover={{
                     scale: 1.1,
-                    backgroundColor: "#FE9063",
-                    color: "black",
+                    backgroundColor: "white",
+                    color: "#4F46E5",
                     rotate: 3,
                   }}
                   whileTap={{
